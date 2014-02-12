@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pet.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @pet.description %>
+</p>
+
+<p>
+<!--  <strong>Picture:</strong>
+  <%= @pet.picture %> -->
+</p>
+
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_pet_path(@pet) %> |
+<% end %>
+<%= link_to 'Back', pets_path %>
